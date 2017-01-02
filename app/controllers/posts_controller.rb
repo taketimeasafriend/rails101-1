@@ -6,6 +6,10 @@ def new
   @post = Post.new
 end
 
+def edit
+  @group = Group.find(params[:group_id])
+end
+
 def create
   @group = Group.find(params[:group_id])
   @post = Post.new(post_params)
